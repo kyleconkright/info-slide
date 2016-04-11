@@ -1,6 +1,12 @@
 $('document').ready(() => {
 
-	let addBio = function(thumb, target) {
+	let addBio = function(thumb, target, options = {}) {
+
+		let defaults = {
+			direction: 'ltr'
+		}
+
+		let settings = Object.assign({}, defaults, options);
 
 		let targetWidth = $('#content').parent().width();
 		let boxWidthPx = $('#content li').width();
@@ -12,14 +18,26 @@ $('document').ready(() => {
 		$(thumb).on('click', (e) => {
 			var txt = '<li>'+$(e.target).html()+'</li>';
 			
-			$(target).prepend(txt);
-			$(target).css({'left':'-'+boxWidth}).animate({'left':'0'}, () => {
-				$(target+' li').last().remove();
-			});
+			if(options.direction === 'rtl') {
+				$(target).append(txt);
+				$(target).animate({'right':boxWidth}, () => {
+					$(target).css({right: '0'});
+					$(target+' li').first().remove();
+				});
+			} else {
+				$(target).prepend(txt);
+				$(target).css({'left':'-'+boxWidth}).animate({'left':'0'}, () => {
+					$(target+' li').last().remove();
+				});	
+			}
+
+			
 		});
+
+		console.log(options.direction);
 	}
 
 
-	addBio('#content li', '#target');
+	addBio('#content li', '#target', {direction: 'rtl'});
 
 });
