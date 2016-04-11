@@ -23,8 +23,8 @@ body {
 }
 
 #content li, #target li {
-	max-width: 29.333333%;
-	min-width: 29.333333%;
+	max-width: 21%;
+	min-width: 21%;
 	height: 200px;
 	display: flex;
 	justify-content: center;
