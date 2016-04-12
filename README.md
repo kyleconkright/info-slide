@@ -1,5 +1,5 @@
 # Info Slider
-Simple slider function to update an info panel
+Simple slider function to update an info panel. This is a little time challenge to build this from scratch with ES2015 and jQuery only. I will continue to add features for fun.
 See example [here](http://kyleconkright.github.io/info-slider/)
 
 `{direction: 'rtl'}` to reverse the panel flow.
