@@ -6,9 +6,9 @@ let simpleSlide = function(thumb, target, options = {}) {
 
 	let settings = Object.assign({}, defaults, options);
 
-	let targetWidth = $('#content').parent().width();
-	let boxWidthPx = $('#content li').width();
-	let marginPx = $('#content li').css('margin').split('px');
+	let targetWidth = $('#target').parent().width();
+	let boxWidthPx = $('#target li').width();
+	let marginPx = $('#target li').css('margin').split('px');
 	let boxMargin = parseInt(100 * marginPx[0]) / targetWidth * 2;
 	let boxWidth = parseInt(100 * (boxWidthPx / targetWidth) + boxMargin ) + '%';
 

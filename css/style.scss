@@ -37,13 +37,11 @@ header {
 }
 
 #content li, #target li {
-	max-width: 21%;
-	min-width: 21%;
+	font-size: 2em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background: linear-gradient(45deg, aliceblue, lightblue);
-	margin: 2%;
 	cursor: pointer;
 	border-radius: 2px;
 	&:before {
@@ -61,9 +59,19 @@ header {
 	}
 }	
 
+#content li {
+	width: auto;
+	flex: 1;
+	margin: 2%;
+}
+
 #target li {
 	background: linear-gradient(45deg, teal, lightblue);
 	color: white;
+	font-size: 3em;
+	max-width: 21%;
+	min-width: 21%;
+	margin: 2%;
 }
 
 

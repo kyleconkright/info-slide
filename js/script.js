@@ -1,5 +1,7 @@
 $('document').ready(() => {
 
-	simpleSlide('#content li', '#target');
+	simpleSlide('#content li', '#target', {
+		//direction: 'rtl'
+	});
 
 });
