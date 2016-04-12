@@ -4,10 +4,10 @@ var gulp = require('gulp'),
 gulp.task('default', ['watch']);
 
 gulp.task('watch', function(){
-	gulp.watch('*.scss',['style']);
+	gulp.watch('css/style.scss',['style']);
 });
 
 gulp.task('style', function() {
-	return sass('*.scss')
-		.pipe(gulp.dest('.'));
+	return sass('css/style.scss')
+		.pipe(gulp.dest('css'));
 });

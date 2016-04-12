@@ -1,3 +1,5 @@
+@import "mixins";
+
 * {
 	padding: 0;
 	margin: 0;
@@ -6,10 +8,22 @@
 }
 
 body {
-	margin: 2%;
-	font-family: gotham;
-	font-weight: 700;
-	color: #333;
+	font-family: Roboto;
+	font-weight: 400;
+	color: #028181;
+}
+
+header {
+	padding: 4% 4% 2%;
+	text-align: center;
+	h1 {
+		font-weight: 100;
+		font-size: 2.25em;
+	}
+}
+
+#container {
+	margin: 0 2% 2%;
 }
 
 #content {
@@ -20,7 +34,6 @@ body {
 #target {
 	display: flex;
 	position: relative;
-	
 }
 
 #content li, #target li {
@@ -37,6 +50,14 @@ body {
 	    content: "";
 	    display: block;
 	    padding-top: 100%;
+	}
+	@include tablet {
+		max-width: 46%;
+		min-width: 46%;
+	}
+	@include mobile {
+		max-width: 96%;
+		min-width: 96%;
 	}
 }	
 

@@ -12,6 +12,8 @@ let simpleSlide = function(thumb, target, options = {}) {
 	let boxMargin = parseInt(100 * marginPx[0]) / targetWidth * 2;
 	let boxWidth = parseInt(100 * (boxWidthPx / targetWidth) + boxMargin ) + '%';
 
+	const SPEED = 300;
+
 	
 	$(thumb).on('click', (e) => {
 		var txt = '<li>'+$(e.target).html()+'</li>';
@@ -29,7 +31,6 @@ let simpleSlide = function(thumb, target, options = {}) {
 			});	
 		}
 
-		
 	});
 
 }
